@@ -1,0 +1,99 @@
+{% load static %}
+{% load news_tags %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{title}}</title>
+	<link type="text/css" href="{% static 'news/css/bootstrap.min.css' %}" rel="stylesheet" />
+	<link type="text/css" href="{% static 'news/css/main.css' %}" rel="stylesheet" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="shortcut icon" href="{% static 'news/images/main.ico' %}" type="image/x-icon"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<header>
+{% block mainmenu %}
+<nav class="navbar fixed-top navbar-expand-xl navbar-light bg-light shadow">
+	<div class="container">
+		<a href="{% url 'home' %}" class="navbar-brand pb-3">Site</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+			aria-controls="navbarContent" aria-expanded="false">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarContent">
+			<ul class="navbar-nav me-auto mb-2">
+				<li class="nav-item dropdown">
+          			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            		Новости
+          			</a>
+          			<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            			<li><a class="dropdown-item" href="{% url 'news_posts' %}">Все новости</a></li>
+						<li><hr class="dropdown-divider"></li>
+						{% for c in cats %}
+							{% if c.pk == cat_selected %}
+							<li><a class="dropdown-item active">{{c.name}}</a></li>
+							{% else %}
+							<li><a class="dropdown-item" href="{{ c.get_absolute_url }}">{{c.name}}</a></li>
+							{% endif %}
+						{% endfor %}
+          			</ul>
+        		</li>
+				{% for m in menu %}
+				<li class="nav-item">
+					<a class="nav-link" href="{% url m.url_name %}">{{m.title}}</a>
+				</li>
+				{% endfor %}
+			</ul>
+			<form action="{% url 'search' %}" method="get" class="d-flex">
+				<input required type="search" name="q" placeholder="Поиск" class="form-control me-2" aria-label="Search">
+				<button type="submit" class="btn btn-outline-success"><img class="pb-1" src="\static\news\images\search.svg" alt=""></button>
+			</form>
+		</div>
+	</div>
+</nav>
+{% endblock mainmenu %}
+</header>
+
+<main>
+{% block carousel %}{% endblock carousel %}
+{% block lastnews %}{% endblock lastnews %}
+{% block two_carousel %}{% endblock two_carousel %}
+{% block allnews %}{% endblock allnews %}
+{% block content %}{% endblock content %}
+</main>
+
+<footer class="container-fluid footer_color pt-5">
+	<div class="container">
+		<div class="row">
+			<div class="col col-lg-6 col-md-6 col-sm-12 col-12 text-light">
+				<h4 class="footer_label border-start border-5 py-2 ps-2">Контакты</h4>
+			</div>
+
+			<div class="col col-lg-6 col-md-6 col-sm-12 col-12 text-light">
+				<h4 class="footer_label border-start border-5 py-2 ps-2">Социальные сети</h4>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12 hstack gap-3 mt-5">
+				<a href="{% url 'news_posts' %}" class="carousel_animate_link"><p>Новости</p></a>
+				<a href="{% url 'contact' %}" class="carousel_animate_link"><p>Обратная связь</p></a>
+				<p class="ms-auto"><a href="#top" class="carousel_animate_link">Наверх <img src="\static\news\images\arrow-up.svg" alt=""></a></p>
+			</div>
+
+			<div class="col"><div class="border-top border-1 border-secondary my-2"></div></div>
+
+			<div class="col-12 text-light">
+				<p>&copy; 2022 Частичное или полное копирование информации с данного сайта для распространения на других ресурсах, в том числе и бумажных, строго запрещено.</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- Подключение Bootstrap JS -->
+<script src="{% static 'news/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

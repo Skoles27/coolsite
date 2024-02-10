@@ -1,0 +1,134 @@
+{% extends 'news/base.html' %}
+{% load embed_video_tags %}
+
+{% block content %}
+<div class="container">
+    <div class="row my-5">
+        <div class="col col-lg-9 col-md-12 col-sm-12 col-12 mt-5">
+            <h1>{{legal_cases_post.title}}</h1>
+			<div class="border-top border-1"></div>
+			<img src="\static\news\images\calendar-event.svg" alt="">
+			<small class="text-muted">{{legal_cases_post.time_update|date:"d.m.Y H:i"}}</small>
+
+			<div class="main_text mt-3">{{legal_cases_post.content|safe|linebreaks}}</div>
+
+			{% if legal_cases_post.video %}
+				<div class="ratio ratio-16x9 d-flex justify-content-center mt-5">
+    				{% video legal_cases_post.video 'medium' %}
+				</div>
+			{% endif %}
+
+			<h4 class="label border-start border-5 border-danger py-2 ps-2 my-5"><a href="{% url 'news_posts' %}" class="animate_link">Похожие новости</a></h4>
+
+				<div class="row">
+				{% for p in allnews %}
+				{% if forloop.counter >= 4 and forloop.counter <= 9 %}
+					<div class="col col-lg-6 col-md-6 col-sm-6 col-12 mb-5 text-center">
+						<h5><a href="{{ p.get_absolute_url }}" class="animate_link" title="{{p.title}}">{{p.title}}</a></h5>
+						<small class="d-flex flex-column text-muted">Дата: {{p.time_update|date:"d.m.Y H:i"}}</small>
+					</div>
+				{% endif %}
+				{% endfor %}
+        	</div>
+		</div>
+
+		<div class="col col-lg-3 col-md-12 col-sm-12 col-12 mt-5">
+			<h5 class="label border-start border-5 border-danger py-2 ps-2"><a href="{% url 'news_posts' %}" class="animate_link social_work_title">Последние новости</a></h5>
+
+			{% for p in allnews %}
+			{% if forloop.counter <= 3 %}
+				<div class="col col-lg-12 col-md-12 col-sm-12 col-12 my-5">
+					<div class="card h-100 shadow rounded">
+						{% if p.photo %}
+							<img src="{{p.photo.url}}" class="small_card rounded" alt="{{p.title}}">
+						{% endif %}
+						<div class="card-body">
+        					<h6 class="card-title small_card_title"><a href="{{ p.get_absolute_url }}" class="animate_link">{{p.title}}</a></h6>
+						</div>
+						<div class="card-footer">
+							<small class="text-muted">Дата: {{p.time_update|date:"d.m.Y H:i"}}</small>
+						</div>
+					</div>
+				</div>
+			{% endif %}
+			{% endfor %}
+
+			<h5 class="label border-start border-5 border-danger py-2 ps-2 mb-5 social_work_title"><a href="{% url 'social_work' %}" class="animate_link">Общественная деятельность</a></h5>
+
+			<div id="third_carousel" class="carousel slide" data-bs-ride="carousel">
+  				<div class="carousel-inner">
+					{% for p in socialwork %}
+						{% if forloop.counter == 1 %}
+    						<div class="carousel-item active">
+								{% if p.photo %}
+      								<img src="{{p.photo.url}}" class="d-block w-100" alt="...">
+								{% endif %}
+								<div class="carousel-caption rounded bg-dark bg-opacity-75 text-white">
+			  						<p class="carousel_title_small"><a class="carousel_animate_link" href="{{ p.get_absolute_url }}">{{p.title}}</a></p>
+		  						</div>
+							</div>
+						{% endif %}
+						{% if forloop.counter != 1 and forloop.counter <= 5 %}
+							<div class="carousel-item">
+								{% if p.photo %}
+		  							<img src="{{p.photo.url}}" class="d-block w-100" alt="...">
+		  						{% endif %}
+								<div class="carousel-caption rounded bg-dark bg-opacity-75 text-white">
+			  						<p class="carousel_title_small"><a class="carousel_animate_link" href="{{ p.get_absolute_url }}">{{p.title}}</a></p>
+		  						</div>
+							</div>
+						{% endif %}
+	  				{% endfor %}
+				</div>
+
+  				<button class="carousel-control-prev" type="button" data-bs-target="#third_carousel" data-bs-slide="prev">
+    			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    			<span class="visually-hidden">Предыдущий</span>
+ 		 		</button>
+  				<button class="carousel-control-next" type="button" data-bs-target="#third_carousel" data-bs-slide="next">
+    			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+    			<span class="visually-hidden">Следующий</span>
+  				</button>
+			</div>
+
+			<h5 class="label border-start border-5 border-danger py-2 ps-2 my-5"><a href="{% url 'education' %}" class="animate_link">Образование</a></h5>
+
+			<div id="fourth_carousel" class="carousel slide" data-bs-ride="carousel">
+  				<div class="carousel-inner">
+					{% for p in education %}
+						{% if forloop.counter == 1 %}
+    						<div class="carousel-item active">
+								{% if p.photo %}
+      								<img src="{{p.photo.url}}" class="d-block w-100" alt="...">
+								{% endif %}
+								<div class="carousel-caption rounded bg-dark bg-opacity-75 text-white">
+			  						<p class="carousel_title_small"><a class="carousel_animate_link" href="{{ p.get_absolute_url }}">{{p.title}}</a></p>
+		  						</div>
+							</div>
+						{% endif %}
+						{% if forloop.counter != 1 and forloop.counter <= 5 %}
+							<div class="carousel-item">
+								{% if p.photo %}
+		  							<img src="{{p.photo.url}}" class="d-block w-100" alt="...">
+		  						{% endif %}
+								<div class="carousel-caption rounded bg-dark bg-opacity-75 text-white">
+			  						<p class="carousel_title_small"><a class="carousel_animate_link" href="{{ p.get_absolute_url }}">{{p.title}}</a></p>
+		  						</div>
+							</div>
+						{% endif %}
+	  				{% endfor %}
+				</div>
+
+  				<button class="carousel-control-prev" type="button" data-bs-target="#fourth_carousel" data-bs-slide="prev">
+    			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    			<span class="visually-hidden">Предыдущий</span>
+ 		 		</button>
+  				<button class="carousel-control-next" type="button" data-bs-target="#fourth_carousel" data-bs-slide="next">
+    			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+    			<span class="visually-hidden">Следующий</span>
+  				</button>
+			</div>
+		</div>
+    </div>
+</div>
+{% endblock content %}

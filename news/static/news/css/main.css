@@ -1,0 +1,656 @@
+.carousel_text{
+    width: 30%;
+    text-align: left;
+}
+
+.carousel_title{
+    font-size: 25px;
+}
+
+.label {
+    background: #f0f0f0;
+    height: 50px;
+    margin: 0;
+}
+
+.image_card_allnews{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.border_allnews{
+    width: 100px;
+}
+
+main{
+  margin-top: 65px;
+}
+
+.footer_color{
+    background: #363B40;
+}
+
+.footer_label{
+    background: #42494F;
+    border-color: #858D94;
+    height: 50px;
+    margin: 0;
+}
+
+.animate_link{
+    text-decoration: none;
+    color: #000;
+}
+
+.animate_link:hover{
+    color: #000;
+    text-decoration: underline;
+}
+
+.carousel_animate_link{
+    text-decoration: none;
+    color: #fff;
+}
+
+.carousel_animate_link:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-size: 17px;
+    color: #000;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #f00;
+}
+
+.social_work_title{
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+@media (min-width: 1400px){
+#main_carousel .carousel-item{
+    height: 600px;
+}
+
+#main_carousel .carousel-item img{
+    height: 600px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+.card-img-top {
+    width: 100%;
+    height: 355px;
+    object-fit: cover;
+}
+
+
+
+#two_carousel_left .carousel-item{
+    height: 335px;
+}
+
+#two_carousel_left .carousel-item img{
+    width: 100%;
+    height: 335px;
+    object-fit: cover;
+}
+
+#two_carousel_right .carousel-item{
+    height: 335px;
+}
+
+#two_carousel_right .carousel-item img{
+    width: 100%;
+    height: 335px;
+    object-fit: cover;
+}
+
+.two_carousel_title{
+    font-size: 20px;
+}
+
+
+
+.small_card{
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+}
+
+.small_card_title{
+    font-size: 17px;
+}
+
+
+
+#third_carousel .carousel-item{
+    height: 180px;
+}
+
+#third_carousel .carousel-item img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+#fourth_carousel .carousel-item{
+    height: 180px;
+}
+
+#fourth_carousel .carousel-item img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.carousel_title_small{
+    font-size: 14px;
+}
+}
+
+
+
+@media (min-width: 1200px) and (max-width: 1400px){
+#main_carousel .carousel-item{
+    height: 500px;
+}
+
+#main_carousel .carousel-item img{
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.carousel_text{
+    width: 40%;
+    font-size: 14px;
+}
+
+
+
+.card-img-top {
+    width: 100%;
+    height: 305px;
+    object-fit: cover;
+}
+
+
+
+#two_carousel_left .carousel-item{
+    height: 320px;
+}
+
+#two_carousel_left .carousel-item img{
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+#two_carousel_right .carousel-item{
+    height: 320px;
+}
+
+#two_carousel_right .carousel-item img{
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+.two_carousel_title{
+    font-size: 18px;
+}
+
+
+
+.small_card{
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+}
+
+.small_card_title{
+    font-size: 15px;
+}
+
+
+
+#third_carousel .carousel-item{
+    height: 150px;
+}
+
+#third_carousel .carousel-item img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+#fourth_carousel .carousel-item{
+    height: 150px;
+}
+
+#fourth_carousel .carousel-item img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.carousel_title_small{
+    font-size: 12px;
+}
+
+.social_work_title{
+    font-size: 18px;
+}
+}
+
+
+
+
+@media (min-width: 992px) and (max-width: 1200px){
+main{
+  margin-top: 55px;
+}
+
+#main_carousel .carousel-item{
+    height: 450px;
+}
+
+#main_carousel .carousel-item img{
+    height: 450px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.carousel_title{
+    font-size: 20px;
+}
+
+.carousel_text{
+    width: 40%;
+    font-size: 12px;
+}
+
+
+
+.card-img-top {
+    width: 100%;
+    height: 255px;
+    object-fit: cover;
+}
+
+
+
+#two_carousel_left .carousel-item{
+    height: 300px;
+}
+
+#two_carousel_left .carousel-item img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+#two_carousel_right .carousel-item{
+    height: 300px;
+}
+
+#two_carousel_right .carousel-item img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.two_carousel_title{
+    font-size: 17px;
+}
+
+
+
+.small_card{
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+}
+
+.small_card_title{
+    font-size: 13px;
+}
+
+
+
+#third_carousel .carousel-item{
+    height: 150px;
+}
+
+#third_carousel .carousel-item img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+#fourth_carousel .carousel-item{
+    height: 150px;
+}
+
+#fourth_carousel .carousel-item img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.carousel_title_small{
+    font-size: 11px;
+}
+
+.social_work_title{
+    font-size: 14px;
+}
+}
+
+
+
+@media (min-width: 768px) and (max-width: 992px){
+main{
+  margin-top: 55px;
+}
+
+#main_carousel .carousel-item{
+    height: 350px;
+}
+
+#main_carousel .carousel-item img{
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.carousel_title{
+    font-size: 17px;
+}
+
+.carousel_text{
+    width: 50%;
+    font-size: 12px;
+}
+
+
+
+.card-img-top {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+
+
+#two_carousel_left .carousel-item{
+    height: 350px;
+}
+
+#two_carousel_left .carousel-item img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+#two_carousel_right .carousel-item{
+    height: 350px;
+}
+
+#two_carousel_right .carousel-item img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.two_carousel_title{
+    font-size: 17px;
+}
+
+
+
+.small_card{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.small_card_title{
+    font-size: 23px;
+}
+
+
+
+#third_carousel .carousel-item{
+    height: 400px;
+}
+
+#third_carousel .carousel-item img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+#fourth_carousel .carousel-item{
+    height: 400px;
+}
+
+#fourth_carousel .carousel-item img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.carousel_title_small{
+    font-size: 17px;
+}
+}
+
+
+
+@media (min-width: 576px) and (max-width: 768px){
+main{
+  margin-top: 55px;
+}
+
+#main_carousel .carousel-item{
+    height: 280px;
+}
+
+#main_carousel .carousel-item img{
+    height: 280px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.carousel_title{
+    font-size: 20px;
+}
+
+.carousel_text{
+    width: 70%;
+}
+
+
+
+.card-img-top {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+
+
+#two_carousel_left .carousel-item{
+    height: 300px;
+}
+
+#two_carousel_left .carousel-item img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+#two_carousel_right .carousel-item{
+    height: 300px;
+}
+
+#two_carousel_right .carousel-item img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.two_carousel_title{
+    font-size: 15px;
+}
+
+
+
+.small_card{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.small_card_title{
+    font-size: 20px;
+}
+
+
+
+#third_carousel .carousel-item{
+    height: 300px;
+}
+
+#third_carousel .carousel-item img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+#fourth_carousel .carousel-item{
+    height: 300px;
+}
+
+#fourth_carousel .carousel-item img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.carousel_title_small{
+    font-size: 17px;
+}
+}
+
+
+
+@media (max-width: 576px){
+main{
+  margin-top: 55px;
+}
+
+#main_carousel .carousel-item{
+    height: 220px;
+}
+
+#main_carousel .carousel-item img{
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.carousel_title{
+    font-size: 13px;
+}
+
+.carousel_text{
+    width: 70%;
+}
+
+
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+
+#two_carousel_left .carousel-item{
+    height: 220px;
+}
+
+#two_carousel_left .carousel-item img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+#two_carousel_right .carousel-item{
+    height: 220px;
+}
+
+#two_carousel_right .carousel-item img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.two_carousel_title{
+    font-size: 11px;
+}
+
+
+
+.small_card{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.small_card_title{
+    font-size: 17px;
+}
+
+
+
+#third_carousel .carousel-item{
+    height: 230px;
+}
+
+#third_carousel .carousel-item img{
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+#fourth_carousel .carousel-item{
+    height: 230px;
+}
+
+#fourth_carousel .carousel-item img{
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.carousel_title_small{
+    font-size: 13px;
+}
+}
